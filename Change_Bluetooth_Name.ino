@@ -1,10 +1,11 @@
 #include <SoftwareSerial.h>
+#define key 9
 SoftwareSerial BT(10, 11);//RX, TX
 
 void setup() {
-  pinMode(9, OUTPUT);
+  pinMode(key, OUTPUT);
 
-  digitalWrite(9, HIGH);
+  digitalWrite(key, HIGH);
   Serial.begin(9600);
   Serial.println("Enter AT Command: ");
   BT.begin(38400); 
